@@ -9,6 +9,7 @@ import VisjonerPage from "./components/VisjonerPage"; // Import your Visjoner pa
 import AktivitetPage from "./components/AktivitetPage"; // Import your Visjoner page component
 import MedlemmerPage from "./components/MedlemmerPage"; // Adjust the path based on your file structure
 import KontaktPage from "./components/KontaktPage"; // Adjust the path based on your file structure
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/medlemmer" element={<MedlemmerPage />} />
         <Route path="/kontakt" element={<KontaktPage />} />
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
