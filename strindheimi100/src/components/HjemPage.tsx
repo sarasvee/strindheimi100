@@ -1,5 +1,6 @@
 import React from "react";
 import droneImage from "../assets/droneBildeStadion.jpg"; // Adjust the path as necessary
+import Sponsors from "./Sponsors";
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
         alt="Drone view of stadium"
         style={{ width: "100%", display: "block" }}
       />
+      <Sponsors></Sponsors>
     </div>
   );
 };

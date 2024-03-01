@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         "custom-blue": "#292f93",
         "custom-yellow": "#f5e60a",
+        "custom-yellowDark": "#c4b808",
       },
     },
   },
