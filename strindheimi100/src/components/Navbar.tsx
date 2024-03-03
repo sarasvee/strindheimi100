@@ -40,7 +40,7 @@ const Navbar = () => {
       style={{
         cursor: hovered ? "none" : "auto",
       }}
-      className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-custom-blue backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl"
+      className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-black/10 backdrop-blur-lg md:left-6 md:right-6 md:top-6 md:rounded-2xl"
     >
       <div className="glass-nav flex items-center justify-between px-5 py-5">
         <Cursor hovered={hovered} scope={scope} />
@@ -83,7 +83,7 @@ const Cursor = ({
 };
 
 const Logo = () => (
-  <span className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-white mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
+  <span className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-custom-blue mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
     Strindheim i 100
   </span>
 );
@@ -100,12 +100,12 @@ const GlassLink = ({ text, to }: { text: string; to: string }) => {
   return (
     <Link
       to={to}
-      className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
+      className="group relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95"
     >
-      <span className="relative z-10 text-white/90 transition-colors group-hover:text-white">
+      <span className="relative z-10 transition-colors group-hover:text-white">
         {text}
       </span>
-      <span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
+      {/* This span with gradient can be removed since we are now using gradient on the link itself */}
     </Link>
   );
 };
@@ -148,12 +148,12 @@ const Members = () => {
   return (
     <Link
       to="/medlemmer"
-      className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
+      className="group relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95"
     >
-      <span className="relative z-10 text-white/90 transition-colors group-hover:text-white">
+      <span className="relative z-10 transition-colors group-hover:text-white">
         Støttespillere
       </span>
-      <span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
+      {/* This span with gradient can be removed since we are now using gradient on the link itself */}
     </Link>
   );
 };
